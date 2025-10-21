@@ -1,0 +1,17 @@
+Lo que TÚ Debes Hacer Ahora:
+
+  La parte del "frontend" (la aplicación de React) está lista. Ahora te toca a ti construir el "backend"
+  (el servidor) para que todo funcione con una base de datos real.
+
+   1. Sigue la Guía `DATABASE_SETUP.md`: Este es tu siguiente paso. Instala PostgreSQL y Node.js, y
+      configura el proyecto del servidor como se indica.
+   2. Construye la API del Servidor: Deberás crear el código para el archivo server/index.js. Este código
+      se encargará de:
+       * Conectarse a tu base de datos PostgreSQL.
+       * Crear los "endpoints" (rutas) para login, register, getRecipes, saveRecipe, y deleteRecipe.
+       * Dentro de cada endpoint, ejecutar las consultas SQL correspondientes (por ejemplo, INSERT INTO 
+         usuarios... para el registro). Recuerda siempre hashear las contraseñas antes de guardarlas,
+         usando una librería como bcrypt.
+
+  Una vez que tengas tu servidor funcionando, solo tendrás que cambiar las funciones del objeto api en
+  App.tsx para que hagan llamadas fetch a tu servidor en lugar de usar el localStorage.

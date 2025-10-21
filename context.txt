@@ -1,0 +1,106 @@
+## Objetivo General del Proyecto
+Crear una aplicación web full-stack llamada "Recetario Colaborativo". La plataforma debe ser visualmente moderna, intuitiva y responsive. Su función principal es permitir a los usuarios registrar, visualizar, buscar, editar y eliminar sus propias recetas de cocina, así como ver las recetas compartidas por otros usuarios. El diseño visual debe seguir estrictamente la estética "Moderno y Vibrante" definida a continuación.
+## Funcionalidades Clave de la Aplicación
+1. Gestión de Recetas (CRUD Completo):
+Crear: Los usuarios deben poder agregar nuevas recetas a través de un formulario dedicado. El formulario debe permitir añadir dinámicamente múltiples ingredientes y pasos de preparación.
+Leer (Visualizar):
+Vista Principal: Una vista de cuadrícula (grid) con todas las recetas de todos los usuarios.
+Vista de Detalle: Al hacer clic en una receta, se debe navegar a una página dedicada que muestre toda la información de esa receta (imagen, descripción completa, lista de ingredientes, pasos, autor, fecha).
+Actualizar: El creador de una receta debe tener la opción de editarla a través de un formulario pre-rellenado con la información existente.
+Eliminar: El creador de una receta debe poder eliminarla de la plataforma, previa confirmación.
+2. Búsqueda y Filtrado:
+La página principal debe contar con una barra de búsqueda prominente.
+La búsqueda debe ser funcional y filtrar las recetas en tiempo real (o al presionar Enter) por:
+Nombre de la receta.
+Ingredientes.
+3. Perfiles de Usuario y Colaboración:
+Aunque no se requiere un sistema de autenticación complejo, la aplicación debe simular el concepto de "creador". Cada receta está asociada a un nombre de usuario (creador).
+Se debe poder hacer clic en el nombre del creador en una receta.
+Esto llevará a una "Página de Perfil de Usuario" que mostrará el nombre del usuario, un contador de cuántas recetas ha compartido, y una cuadrícula con todas las recetas de ese usuario específico.
+## Especificaciones de Diseño Visual y Experiencia de Usuario (UI/UX)
+### Tema General
+Estilo: Moderno, limpio, vibrante y minimalista.
+Sensación: Energética, fácil de usar y visualmente atractiva, fomentando la interacción y el descubrimiento de contenido.
+Layout: Espacioso, con buen uso de márgenes y paddings para evitar la saturación visual.
+### Paleta de Colores (Estricta)
+Fondo Principal: #F4F7F6 (Un gris muy claro, casi blanco).
+Primario (Cabecera, Títulos Oscuros): #2C3E50 (Azul naval).
+Acento Vibrante (Botones, Enlaces, Bordes en foco): #FF6B6B (Coral vibrante).
+Acento Secundario (Gradientes): #FF8E53 (Naranja suave, para usar en conjunto con el coral).
+Texto Principal: #333333 (Gris oscuro).
+Texto Secundario (Descripciones): #555555 (Gris medio).
+Texto Desactivado/Autor: #B0B0B0 (Gris claro).
+Fondo de Tarjetas/Inputs: #FFFFFF (Blanco puro).
+### Tipografía
+Fuente Principal: Montserrat (importada de Google Fonts).
+Peso Regular: 400 para todo el texto de párrafos y descripciones.
+Peso Bold: 700 para títulos (h1, h2, h3) y elementos importantes.
+### Diseño de Componentes y Vistas
+1. Layout General y Cabecera (Header):
+Contenido centrado con un max-width de 1200px para legibilidad en pantallas grandes.
+La cabecera debe ser una barra sólida con color de fondo #2C3E50.
+El título de la aplicación "Recetario Colaborativo" debe estar en la cabecera, centrado, en color blanco y con font-weight: 700.
+2. Página Principal (Feed de Recetas):
+Debajo de la cabecera, debe haber una Barra de Búsqueda centrada.
+Debajo de la búsqueda, se mostrará una Cuadrícula de Recetas responsiva (display: grid con grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))).
+3. Tarjeta de Receta (Recipe Card):
+Fondo blanco (#FFFFFF) con border-radius: 8px y una sombra sutil (box-shadow: 0 5px 20px rgba(0,0,0,0.06)).
+Estructura Vertical:
+Imagen: Ocupa la parte superior, con height: 180px y object-fit: cover.
+Contenido: Un padding interno de 20px.
+Título (h3): Color #2C3E50, font-size: 20px.
+Descripción Corta (p): Color #555555, font-size: 14px.
+Autor (p): Al final, con color #B0B0B0, font-weight: 700, y text-transform: uppercase.
+Interactividad: Al pasar el cursor (:hover), la tarjeta debe escalar ligeramente (transform: scale(1.03)).
+4. Barra de Búsqueda:
+Input de texto grande con padding generoso (15px 20px).
+Bordes redondeados (border-radius: 30px).
+Borde por defecto de color #E0E0E0.
+Al hacer foco (:focus), el borde debe cambiar al color de acento #FF6B6B.
+5. Botón Flotante de Acción (FAB - Floating Action Button):
+Para agregar una nueva receta.
+Posición fija (position: fixed) en la esquina inferior derecha.
+Circular (border-radius: 50%), con width y height de 60px.
+Fondo: Un gradiente lineal (linear-gradient(45deg, #FF6B6B, #FF8E53)).
+Icono: Un símbolo + grande y blanco en el centro.
+Sombra: Una sombra coloreada sutil (box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4)).
+Interactividad: Al pasar el cursor (:hover), debe escalar (transform: scale(1.1)).
+6. Vista de Detalle de Receta:
+Layout de una sola columna.
+Imagen Principal: Grande y destacada en la parte superior.
+Título (h1): Grande, debajo de la imagen.
+Metadatos: "Por: [Nombre del Creador]" y "Publicado el: [Fecha]" debajo del título.
+Descripción Completa.
+Sección de Ingredientes: Con un título <h2>Ingredientes y una lista (ul) de los ingredientes.
+Sección de Pasos: Con un título <h2>Preparación y una lista ordenada (ol) de los pasos.
+Botones de "Editar" y "Eliminar" visibles solo si el usuario es el creador.
+7. Formulario de Crear/Editar Receta:
+Inputs y textáreas estilizados para coincidir con la barra de búsqueda (bordes redondeados, cambio de color en foco).
+Secciones claras para "Nombre", "Descripción", "Ingredientes" y "Pasos".
+Para ingredientes y pasos, debe haber botones para "Añadir Ingrediente" y "Añadir Paso", que agreguen nuevos campos de texto al formulario dinámicamente.
+## Modelos de Datos Sugeridos
+code
+JavaScript
+// Modelo para una Receta
+const Recipe = {
+  id: String, // Identificador único
+  name: String,
+  description: String,
+  imageUrl: String,
+  ingredients: [
+    {
+      quantity: String, // ej. "500"
+      unit: String,     // ej. "ml"
+      name: String,     // ej. "de leche"
+    }
+  ],
+  steps: [String],
+  creator: String, // Nombre del usuario creador
+  createdAt: Date
+};
+
+// Modelo para un Usuario (simplificado)
+const User = {
+  name: String, // Nombre de usuario
+  recipes: [Recipe.id] // Array de IDs de las recetas que ha creado
+};
