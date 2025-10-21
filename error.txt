@@ -1,0 +1,45 @@
+==> Cloning from https://github.com/Navis2006/Recetarios
+==> Checking out commit 18ce30934193c72536acc5c0d31c59050a6d762a in branch main
+==> Using Node.js version 22.16.0 (default)
+==> Docs on specifying a Node.js version: https://render.com/docs/node-version
+==> Running build command 'npm install'...
+added 68 packages, and audited 69 packages in 2s
+9 packages are looking for funding
+  run `npm fund` for details
+found 0 vulnerabilities
+==> Uploading build...
+==> Uploaded in 4.5s. Compression took 1.0s
+==> Build successful 🎉
+==> Deploying...
+==> Running 'node server/index.js'
+/opt/render/project/src/server/index.js:2
+app.listen(PORT, '0.0.0.0', () => {
+^
+ReferenceError: app is not defined
+    at Object.<anonymous> (/opt/render/project/src/server/index.js:2:1)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+Node.js v22.16.0
+==> Exited with status 1
+==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys
+==> Running 'node server/index.js'
+/opt/render/project/src/server/index.js:2
+app.listen(PORT, '0.0.0.0', () => {
+^
+ReferenceError: app is not defined
+    at Object.<anonymous> (/opt/render/project/src/server/index.js:2:1)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+Node.js v22.16.0
